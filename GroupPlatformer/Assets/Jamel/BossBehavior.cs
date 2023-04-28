@@ -22,7 +22,7 @@ public class BossBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
+        playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -90,11 +90,11 @@ public class BossBehavior : MonoBehaviour
 
             }
         }
-          private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.tag == "player")
             {
-                PlayerManager.TakeDamage();
+                playerManager.TakeDamage();
             }
         }
     }

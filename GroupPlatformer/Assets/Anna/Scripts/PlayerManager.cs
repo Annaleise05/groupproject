@@ -8,8 +8,10 @@ public class PlayerManager : MonoBehaviour
     //declare two variables one max and one current health
     public int currentHealth;
     public int maxHealth;
+    
 
     PlayerMovement playerMovement;
+    
     public int coinCount;
     // Start is called before the first frame update
     void Start()
